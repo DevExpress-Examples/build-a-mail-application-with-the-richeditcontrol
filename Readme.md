@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/RichEditSendMail/Form1.cs) (VB: [Form1.vb](./VB/RichEditSendMail/Form1.vb))
+* [Program.cs](./CS/RichEditSendMail/Program.cs)
+<!-- default file list end -->
 # Building a mail application with the RichEditControl
 
 
