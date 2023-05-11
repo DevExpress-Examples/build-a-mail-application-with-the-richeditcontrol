@@ -92,7 +92,7 @@ Namespace RichEditSendMail
                 End If
             End Sub
 
-'#Region "IUriProvider Members"
+#Region "IUriProvider Members"
             Public Function CreateCssUri(ByVal rootUri As String, ByVal styleText As String, ByVal relativeUri As String) As String Implements IUriProvider.CreateCssUri
                 Return String.Empty
             End Function
@@ -115,7 +115,7 @@ Namespace RichEditSendMail
                     Return _officeImageFormat
                 End If
             End Function
-'#End Region
+#End Region
         End Class
 
         Public Class AttachementInfo
