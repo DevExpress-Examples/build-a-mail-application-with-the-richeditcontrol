@@ -17,7 +17,8 @@ using System.Net;
 using DevExpress.Office.Utils;
 
 namespace RichEditSendMail {
-    public partial class Form1 : Form {
+    public partial class Form1 : DevExpress.XtraEditors.XtraForm
+    {
         public Form1() {
             InitializeComponent();
 

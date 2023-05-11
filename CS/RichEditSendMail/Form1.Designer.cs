@@ -24,14 +24,17 @@ namespace RichEditSendMail {
         /// </summary>
         private void InitializeComponent() {
             this.richEdit = new DevExpress.XtraRichEdit.RichEditControl();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.lblSubject = new System.Windows.Forms.Label();
-            this.edtSubject = new System.Windows.Forms.TextBox();
-            this.lblTo = new System.Windows.Forms.Label();
-            this.edtTo = new System.Windows.Forms.TextBox();
-            this.lblSmtp = new System.Windows.Forms.Label();
-            this.edtSmtp = new System.Windows.Forms.TextBox();
+            this.btnSend = new DevExpress.XtraEditors.SimpleButton();
+            this.lblSubject = new DevExpress.XtraEditors.LabelControl();
+            this.edtSubject = new DevExpress.XtraEditors.TextEdit();
+            this.lblTo = new DevExpress.XtraEditors.LabelControl();
+            this.edtTo = new DevExpress.XtraEditors.TextEdit();
+            this.lblSmtp = new DevExpress.XtraEditors.LabelControl();
+            this.edtSmtp = new DevExpress.XtraEditors.TextEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            ((System.ComponentModel.ISupportInitialize)(this.edtSubject.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edtTo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edtSmtp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.SuspendLayout();
@@ -40,68 +43,72 @@ namespace RichEditSendMail {
             // 
             this.richEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richEdit.Location = new System.Drawing.Point(0, 0);
+            this.richEdit.Margin = new System.Windows.Forms.Padding(4);
             this.richEdit.Name = "richEdit";
-            this.richEdit.Size = new System.Drawing.Size(805, 391);
+            this.richEdit.Size = new System.Drawing.Size(988, 463);
             this.richEdit.TabIndex = 4;
             // 
             // btnSend
             // 
             this.btnSend.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSend.Location = new System.Drawing.Point(728, 2);
+            this.btnSend.Location = new System.Drawing.Point(861, 2);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(5);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(75, 58);
+            this.btnSend.Size = new System.Drawing.Size(125, 91);
             this.btnSend.TabIndex = 3;
             this.btnSend.Text = "Send Mail";
-            this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // lblSubject
             // 
-            this.lblSubject.AutoSize = true;
-            this.lblSubject.Location = new System.Drawing.Point(7, 13);
+            this.lblSubject.Location = new System.Drawing.Point(11, 20);
+            this.lblSubject.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(46, 13);
+            this.lblSubject.Size = new System.Drawing.Size(48, 16);
             this.lblSubject.TabIndex = 2;
             this.lblSubject.Text = "Subject:";
             // 
             // edtSubject
             // 
-            this.edtSubject.Location = new System.Drawing.Point(59, 10);
+            this.edtSubject.EditValue = "Hey, look at this!";
+            this.edtSubject.Location = new System.Drawing.Point(69, 17);
+            this.edtSubject.Margin = new System.Windows.Forms.Padding(5);
             this.edtSubject.Name = "edtSubject";
-            this.edtSubject.Size = new System.Drawing.Size(199, 20);
+            this.edtSubject.Size = new System.Drawing.Size(330, 22);
             this.edtSubject.TabIndex = 0;
-            this.edtSubject.Text = "Hey, look at this!";
             // 
             // lblTo
             // 
-            this.lblTo.AutoSize = true;
-            this.lblTo.Location = new System.Drawing.Point(7, 39);
+            this.lblTo.Location = new System.Drawing.Point(11, 60);
+            this.lblTo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTo.Name = "lblTo";
-            this.lblTo.Size = new System.Drawing.Size(23, 13);
+            this.lblTo.Size = new System.Drawing.Size(20, 16);
             this.lblTo.TabIndex = 2;
             this.lblTo.Text = "To:";
             // 
             // edtTo
             // 
-            this.edtTo.Location = new System.Drawing.Point(59, 36);
+            this.edtTo.Location = new System.Drawing.Point(69, 57);
+            this.edtTo.Margin = new System.Windows.Forms.Padding(5);
             this.edtTo.Name = "edtTo";
-            this.edtTo.Size = new System.Drawing.Size(199, 20);
+            this.edtTo.Size = new System.Drawing.Size(330, 22);
             this.edtTo.TabIndex = 1;
             // 
             // lblSmtp
             // 
-            this.lblSmtp.AutoSize = true;
-            this.lblSmtp.Location = new System.Drawing.Point(272, 13);
+            this.lblSmtp.Location = new System.Drawing.Point(423, 20);
+            this.lblSmtp.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblSmtp.Name = "lblSmtp";
-            this.lblSmtp.Size = new System.Drawing.Size(60, 13);
+            this.lblSmtp.Size = new System.Drawing.Size(66, 16);
             this.lblSmtp.TabIndex = 2;
             this.lblSmtp.Text = "MailServer:";
             // 
             // edtSmtp
             // 
-            this.edtSmtp.Location = new System.Drawing.Point(338, 10);
+            this.edtSmtp.Location = new System.Drawing.Point(499, 17);
+            this.edtSmtp.Margin = new System.Windows.Forms.Padding(5);
             this.edtSmtp.Name = "edtSmtp";
-            this.edtSmtp.Size = new System.Drawing.Size(199, 20);
+            this.edtSmtp.Size = new System.Drawing.Size(330, 22);
             this.edtSmtp.TabIndex = 2;
             // 
             // panelControl1
@@ -114,20 +121,25 @@ namespace RichEditSendMail {
             this.panelControl1.Controls.Add(this.edtSmtp);
             this.panelControl1.Controls.Add(this.lblSmtp);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 391);
+            this.panelControl1.Location = new System.Drawing.Point(0, 463);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(5);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(805, 62);
+            this.panelControl1.Size = new System.Drawing.Size(988, 95);
             this.panelControl1.TabIndex = 4;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 453);
+            this.ClientSize = new System.Drawing.Size(988, 558);
             this.Controls.Add(this.richEdit);
             this.Controls.Add(this.panelControl1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.edtSubject.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edtTo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edtSmtp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -137,13 +149,13 @@ namespace RichEditSendMail {
 
         DevExpress.XtraRichEdit.RichEditControl richEdit;
         #endregion
-        private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.Label lblSubject;
-        private System.Windows.Forms.TextBox edtSubject;
-        private System.Windows.Forms.Label lblTo;
-        private System.Windows.Forms.TextBox edtTo;
-        private System.Windows.Forms.Label lblSmtp;
-        private System.Windows.Forms.TextBox edtSmtp;
+        private DevExpress.XtraEditors.SimpleButton btnSend;
+        private DevExpress.XtraEditors.LabelControl lblSubject;
+        private DevExpress.XtraEditors.TextEdit edtSubject;
+        private DevExpress.XtraEditors.LabelControl lblTo;
+        private DevExpress.XtraEditors.TextEdit edtTo;
+        private DevExpress.XtraEditors.LabelControl lblSmtp;
+        private DevExpress.XtraEditors.TextEdit edtSmtp;
         private DevExpress.XtraEditors.PanelControl panelControl1;
     }
 }

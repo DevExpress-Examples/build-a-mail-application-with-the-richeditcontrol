@@ -16,7 +16,7 @@ Imports DevExpress.Office.Utils
 Namespace RichEditSendMail
 
     Public Partial Class Form1
-        Inherits Form
+        Inherits DevExpress.XtraEditors.XtraForm
 
         Public Sub New()
             InitializeComponent()
